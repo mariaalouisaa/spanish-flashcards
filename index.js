@@ -90,6 +90,15 @@ const family = [
   },
 ];
 
+let categorySelected = colours;
+console.log(categorySelected);
+
 function selectCat(e) {
-  console.log(e);
+  e === "animals"
+    ? (categorySelected = animals)
+    : e === "food"
+    ? (categorySelected = food)
+    : e === "family"
+    ? (categorySelected = family)
+    : (categorySelected = colours);
 }

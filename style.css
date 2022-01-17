@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.categories-container * {
+  border-radius: 50%;
+  border: black solid 0.1em;
+  padding: 5px 10px;
+  margin: auto 0.5em 2em 0.5em;
+}
+
+.flashcard {
+  border: 0.3em solid black;
+  max-width: 20em;
+  padding-block-start: 4em;
+  padding-block-end: 4em;
+  margin: 0 auto 2em auto;
+}

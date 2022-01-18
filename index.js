@@ -124,6 +124,7 @@ let categorySelected = colours;
 const word = document.getElementById("flashcard");
 const button = document.getElementById("action-button");
 const phonetic = document.getElementById("phonetic");
+let flag = document.getElementById("flag-emoji");
 let spanish;
 let pronounce;
 
@@ -135,7 +136,7 @@ function selectCat(e) {
     : e === "family"
     ? (categorySelected = family)
     : (categorySelected = colours);
-  displayWord();
+  displayEnglish();
 }
 
 function displayEnglish() {

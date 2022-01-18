@@ -1,26 +1,42 @@
 body {
   font-family: sans-serif;
   text-align: center;
+  width: 26em;
+  height: 100vh;
+  margin: 0 auto;
+}
+header {
+  background-color: #319fc3;
+  border-radius: 0 0 100% 100%;
+}
+
+h1 {
+  margin: 0;
+  padding-block-start: 1em;
+  padding-block-end: 1em;
 }
 
 .categories-container button {
   border-radius: 50%;
-  border: black solid 0.1em;
+  border: none;
   height: 2.5em;
   width: 2.5em;
-  margin: auto 0.5em 2em 0.5em;
+  margin: auto 0.5em 1em 0.5em;
 }
 
 .flashcard-container {
-  border: 0.3em solid black;
+  background-color: #3c3cac;
+  border-radius: 20px;
   width: 20em;
-  height: 8em;
+  height: 10em;
   margin: 0 auto 2em auto;
 }
 
 .flashcard-word {
-  font-size: 2em;
+  padding-top: 1em;
+  font-size: 2.5em;
   font-weight: 600;
+  color: bisque;
 }
 
 .phonetic {
@@ -29,4 +45,14 @@ body {
 
 .action-button {
   width: 6em;
+  background: #008e81;
+  border: 2px white solid;
+  padding: 0.5em;
+  border-radius: 20px;
+  font-weight: bolder;
+}
+
+button:hover {
+  cursor: pointer;
+  border: 2px solid crimson;
 }

@@ -3,10 +3,11 @@ body {
   text-align: center;
 }
 
-.categories-container * {
+.categories-container button {
   border-radius: 50%;
   border: black solid 0.1em;
-  padding: 5px 10px;
+  height: 2.5em;
+  width: 2.5em;
   margin: auto 0.5em 2em 0.5em;
 }
 

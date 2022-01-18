@@ -10,10 +10,22 @@ body {
   margin: auto 0.5em 2em 0.5em;
 }
 
-.flashcard {
+.flashcard-container {
   border: 0.3em solid black;
-  max-width: 20em;
-  padding-block-start: 4em;
-  padding-block-end: 4em;
+  width: 20em;
+  height: 8em;
   margin: 0 auto 2em auto;
+}
+
+.flashcard-word {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.phonetic {
+  font-style: italic;
+}
+
+.action-button {
+  width: 6em;
 }

@@ -15,9 +15,19 @@
       <button class="cat-3" onclick="selectCat('food')">3</button>
       <button class="cat-4" onclick="selectCat('family')">4</button>
     </div>
-    <p class="flashcard" id="flashcard">TEST WORD</p>
+    <div class="flashcard-container">
+      <p class="flashcard-word" id="flashcard"></p>
+      <p id="phonetic" class="phonetic"></p>
+    </div>
     <form>
-      <button type="submit" id="action-button" value="reveal">REVEAL</button>
+      <button
+        class="action-button"
+        type="submit"
+        id="action-button"
+        value="reveal"
+      >
+        REVEAL
+      </button>
     </form>
     <script src="index.js"></script>
   </body>

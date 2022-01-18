@@ -122,9 +122,10 @@ const family = [
 
 let categorySelected = colours;
 const word = document.getElementById("flashcard");
+const button = document.getElementById("action-button");
+const phonetic = document.getElementById("phonetic");
 let spanish;
 let pronounce;
-const button = document.getElementById("action-button");
 
 function selectCat(e) {
   e === "animals"
@@ -142,6 +143,7 @@ function displayEnglish() {
   let maxNum = categorySelected.length;
   let randomNum = Math.floor(Math.random() * maxNum);
   word.innerHTML = categorySelected[randomNum].english;
+  phonetic.innerHTML = null;
   spanish = categorySelected[randomNum].spanish;
   pronounce = categorySelected[randomNum].pronounciaion;
 }
@@ -151,6 +153,7 @@ function displaySpanish(e) {
   if (this.value === "reveal") {
     button.innerHTML = "NEXT";
     word.innerHTML = spanish;
+    phonetic.innerHTML = pronounce;
     this.value = "next";
   } else if (this.value === "next") {
     displayEnglish();

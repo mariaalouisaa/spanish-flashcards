@@ -72,6 +72,21 @@ const animals = [
     spanish: "conejo",
     pronounciaion: "con-eh-ho",
   },
+  {
+    english: "bear",
+    spanish: "oso",
+    pronounciaion: "os-oh",
+  },
+  {
+    english: "duck",
+    spanish: "pato",
+    pronounciaion: "pat-oh",
+  },
+  {
+    english: "sheep",
+    spanish: "oveja",
+    pronounciaion: "oh-ve-hah",
+  },
 ];
 
 const food = [

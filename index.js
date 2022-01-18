@@ -19,6 +19,36 @@ const colours = [
     spanish: "blanco",
     pronounciaion: "blan-ko",
   },
+  {
+    english: "orange",
+    spanish: "naranja",
+    pronounciaion: "na-rang-ha",
+  },
+  {
+    english: "pink",
+    spanish: "rosa",
+    pronounciaion: "rosa",
+  },
+  {
+    english: "grey",
+    spanish: "gris",
+    pronounciaion: "gree-s",
+  },
+  {
+    english: "green",
+    spanish: "verde",
+    pronounciaion: "ver-deh",
+  },
+  {
+    english: "purple",
+    spanish: "morado",
+    pronounciaion: "mor-ado",
+  },
+  {
+    english: "brown",
+    spanish: "marron",
+    pronounciaion: "mah - RRon",
+  },
 ];
 
 const animals = [
@@ -91,7 +121,10 @@ const family = [
 ];
 
 let categorySelected = colours;
-console.log(categorySelected);
+const word = document.getElementById("flashcard");
+let spanish;
+let pronounce;
+const button = document.getElementById("action-button");
 
 function selectCat(e) {
   e === "animals"
@@ -101,4 +134,30 @@ function selectCat(e) {
     : e === "family"
     ? (categorySelected = family)
     : (categorySelected = colours);
+  displayWord();
 }
+
+function displayEnglish() {
+  button.innerHTML = "REVEAL";
+  let maxNum = categorySelected.length;
+  let randomNum = Math.floor(Math.random() * maxNum);
+  word.innerHTML = categorySelected[randomNum].english;
+  spanish = categorySelected[randomNum].spanish;
+  pronounce = categorySelected[randomNum].pronounciaion;
+}
+
+function displaySpanish(e) {
+  e.preventDefault();
+  if (this.value === "reveal") {
+    button.innerHTML = "NEXT";
+    word.innerHTML = spanish;
+    this.value = "next";
+  } else if (this.value === "next") {
+    displayEnglish();
+    this.value = "reveal";
+  }
+}
+
+button.addEventListener("click", displaySpanish);
+
+displayEnglish();

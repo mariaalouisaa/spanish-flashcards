@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=
-    , initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Spanish Flashcards</title>
   </head>
@@ -19,8 +15,10 @@
       <button class="cat-3" onclick="selectCat('food')">3</button>
       <button class="cat-4" onclick="selectCat('family')">4</button>
     </div>
-    <p class="flashcard">TEST WORD</p>
-    <button type="submit">REVEAL</button>
+    <p class="flashcard" id="flashcard">TEST WORD</p>
+    <form>
+      <button type="submit" id="action-button" value="reveal">REVEAL</button>
+    </form>
     <script src="index.js"></script>
   </body>
 </html>

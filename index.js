@@ -72,6 +72,21 @@ const animals = [
     spanish: "conejo",
     pronounciaion: "con-eh-ho",
   },
+  {
+    english: "bear",
+    spanish: "oso",
+    pronounciaion: "os-oh",
+  },
+  {
+    english: "duck",
+    spanish: "pato",
+    pronounciaion: "pat-oh",
+  },
+  {
+    english: "sheep",
+    spanish: "oveja",
+    pronounciaion: "oh-ve-hah",
+  },
 ];
 
 const food = [
@@ -124,6 +139,7 @@ let categorySelected = colours;
 const word = document.getElementById("flashcard");
 const button = document.getElementById("action-button");
 const phonetic = document.getElementById("phonetic");
+let flag = document.getElementById("flag-emoji");
 let spanish;
 let pronounce;
 
@@ -135,7 +151,7 @@ function selectCat(e) {
     : e === "family"
     ? (categorySelected = family)
     : (categorySelected = colours);
-  displayWord();
+  displayEnglish();
 }
 
 function displayEnglish() {

@@ -6,6 +6,5 @@ Features:
 - DOM Manipulation
 - Semantic HTML
 - Data stored in an array of objects
-- Data saved to LocalStorage
 
 Hosted on [GitHub Pages](https://mariaalouisaa.github.io/spanish-flashcards/)

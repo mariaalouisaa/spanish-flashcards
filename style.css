@@ -1,11 +1,15 @@
 body {
   font-family: sans-serif;
   text-align: center;
-  width: 26em;
+  width: 25em;
   height: 100vh;
   margin: 0 auto;
   border-left: #319fc3 2px solid;
   border-right: #319fc3 2px solid;
+}
+.bakground {
+  background: #c0efff;
+  height: 100vh;
 }
 header {
   background-color: #319fc3;
@@ -49,7 +53,7 @@ h1 {
 .action-button {
   width: 6em;
   background: #008e81;
-  border: 2px white solid;
+  border: 2px #c0efff solid;
   padding: 0.5em;
   border-radius: 20px;
   font-weight: bolder;

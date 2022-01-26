@@ -414,9 +414,10 @@ let categorySelected = colours;
 const word = document.getElementById("flashcard");
 const button = document.getElementById("action-button");
 const phonetic = document.getElementById("phonetic");
-let flag = document.getElementById("flag-emoji");
+let flagSpan = document.getElementById("flag");
 let spanish;
 let pronounce;
+let img;
 
 function selectCat(e) {
   e === "animals"
@@ -434,6 +435,12 @@ function displayEnglish() {
   let maxNum = categorySelected.length;
   let randomNum = Math.floor(Math.random() * maxNum);
   word.innerHTML = categorySelected[randomNum].english;
+  if (!img) {
+    img = document.createElement("img");
+    img.classList.add("flag");
+    img.src = "uk-flag.png";
+    flagSpan.appendChild(img);
+  } else img.src = "uk-flag.png";
   phonetic.innerHTML = null;
   spanish = categorySelected[randomNum].spanish;
   pronounce = categorySelected[randomNum].pronounciaion;
@@ -445,6 +452,7 @@ function displaySpanish(e) {
     button.innerHTML = "NEXT";
     word.innerHTML = spanish;
     phonetic.innerHTML = pronounce;
+    img.src = "spain-flag.png";
     this.value = "next";
   } else if (this.value === "next") {
     displayEnglish();
